@@ -103,7 +103,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
                     </p>
                   </div>
                   <Link
-                    href=""
+                    href={`/blog/${card.currentSlug}`}
                     target="_blank"
                     className="text-2xl text-white active:text-gray-300/90 active:scale-90 duration-100 ease-in "
                   >
