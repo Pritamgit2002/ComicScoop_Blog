@@ -11,6 +11,7 @@ async function getData() {
       titleImage,
     }`;
   const data = await client.fetch(query);
+  console.log(data);
   return data;
 }
 export default async function Card() {

@@ -1,4 +1,3 @@
-"use client";
 import localFont from "next/font/local";
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -7,21 +6,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 const heading = localFont({ src: "../../public/fonts/Thin Fox.ttf" });
 export default function Home() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 200);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     // <div className="w-full  min-h-full flex flex-col items-center justify-start bg-black pb-20 ">
 
