@@ -2,32 +2,203 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+body {
+  background: #000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.shimmer_title {
+  margin-bottom: 0;
+}
+
+p {
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.847);
+  width: 500px;
+  text-align: justify;
+  line-height: 1.5em;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  margin: 10px 0 0 5px;
+  padding-top: 10px;
+}
+
+p a {
+  text-decoration: none;
+  color: #fff;
+}
+
+p a:visted {
+  color: #fff;
+}
+
+.shimmer_title {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.1);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#222),
+    to(#222),
+    color-stop(0.5, #fff)
+  );
+  background: -moz-gradient(
+    linear,
+    left top,
+    right top,
+    from(#222),
+    to(#222),
+    color-stop(0.5, #fff)
+  );
+  background: gradient(
+    linear,
+    left top,
+    right top,
+    from(#222),
+    to(#222),
+    color-stop(0.5, #fff)
+  );
+  -webkit-background-size: 125px 100%;
+  -moz-background-size: 125px 100%;
+  background-size: 125px 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer_title;
+  -moz-animation-name: shimmer_title;
+  animation-name: shimmer_title;
+  -webkit-animation-duration: 13s;
+  -moz-animation-duration: 13s;
+  animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #393939;
+}
+
+@-moz-keyframes shimmer_title {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@-webkit-keyframes shimmer_title {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@-o-keyframes shimmer_title {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+@keyframes shimmer_title {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+/* shimmer_subtitle styling for the sub-titles */
+.shimmer_subtitle {
+  margin-bottom: 0;
+}
+.shimmer_subtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.1);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#222),
+    to(#222),
+    color-stop(0.5, #fff)
+  );
+  background: -moz-gradient(
+    linear,
+    left top,
+    right top,
+    from(#222),
+    to(#222),
+    color-stop(0.5, #fff)
+  );
+  background: gradient(
+    linear,
+    left top,
+    right top,
+    from(#222),
+    to(#222),
+    color-stop(0.5, #fff)
+  );
+  -webkit-background-size: 60px 100%;
+  -moz-background-size: 60px 100%;
+  background-size: 60px 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer_title;
+  -moz-animation-name: shimmer_title;
+  animation-name: shimmer_title;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #393939;
+}
+
+@-moz-keyframes shimmer_subtitle {
+  0% {
+    background-position: top left;
+  }
+  120% {
+    background-position: top right;
+  }
+}
+
+@-webkit-keyframes shimmer_subtitle {
+  0% {
+    background-position: top left;
+  }
+  120% {
+    background-position: top right;
+  }
+}
+
+@-o-keyframes shimmer_subtitle {
+  0% {
+    background-position: top left;
+  }
+  120% {
+    background-position: top right;
+  }
+}
+
+@keyframes shimmer_subtitle {
+  0% {
+    background-position: top left;
+  }
+  120% {
+    background-position: top right;
   }
 }
