@@ -98,12 +98,12 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
                     <span className=" text-4xl font-bold ">
                       {selected?.title}
                     </span>
-                    <p className=" font-medium ">
+                    <p className=" font-medium border-t-2 border-gray-300 border-dashed ">
                       {selected?.smallDescription}
                     </p>
                   </div>
                   <Link
-                    href={`/blog/${card.currentSlug}`}
+                    href={`/${card.currentSlug}`}
                     target="_blank"
                     className="text-2xl text-white active:text-gray-300/90 active:scale-90 duration-100 ease-in "
                   >

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import NextBreadcrumb from "@/components/NextBreadcrumb";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* <NextBreadcrumb
+          homeElement={"Home"}
+          separator={<span> / </span>}
+          activeClasses="text-amber-500"
+          containerClasses="flex py-5 bg-gradient-to-r from-purple-600 to-blue-600 text-white "
+          listClasses="hover:underline mx-2 text-2xl text-white font-bold"
+          capitalizeLinks
+        /> */}
+        {children}
+      </body>
     </html>
   );
 }

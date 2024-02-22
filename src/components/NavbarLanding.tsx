@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 const heading = localFont({ src: "../../public/fonts/Thin Fox.ttf" });
 
@@ -7,10 +8,10 @@ const content = [
   { title: "Tech", link: "/" },
   { title: "Movies", link: "/" },
   { title: "About", link: "/" },
-  { title: "Contact", link: "/" },
+  { title: "Contact", link: "/contact" },
 ];
 
-const Navbar = () => {
+const NavbarLanding = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isPastThreshold, setIsPastThreshold] = useState(false);
 
@@ -33,12 +34,13 @@ const Navbar = () => {
       }`}
     >
       <div className="flex items-center justify-between px-10 gap-5 w-full ">
-        <div
+        <Link
+          href="/"
           className="text-3xl font-semibold shimmer_subtitle "
           style={heading.style}
         >
           SmileScoop
-        </div>
+        </Link>
         <div className="flex items-center justify-center gap-4">
           {content.map((item, i) => (
             <div className="  font-bold text-2xl cursor-pointer text-gray-200/65 ">
@@ -51,4 +53,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarLanding;
