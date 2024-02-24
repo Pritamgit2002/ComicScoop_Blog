@@ -47,18 +47,18 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   return (
     <motion.div
       className="w-full pt-20 pb-10 grid grid-cols-1 md:grid-cols-3 max-w-7xl bg-black gap-4 mx-auto overflow-y-auto min-h-screen h-max place-content-center  "
-      // initial={{
-      //   opacity: 0.9,
-      //   y: 100,
-      // }}
-      // animate={{
-      //   opacity: 1,
-      //   y: 0,
-      // }}
-      // transition={{
-      //   duration: 0.95,
-      //   ease: "easeInOut",
-      // }}
+      initial={{
+        opacity: 0.9,
+        y: 100,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 0.95,
+        ease: "easeInOut",
+      }}
     >
       {cards.map((card, i) => (
         <div
