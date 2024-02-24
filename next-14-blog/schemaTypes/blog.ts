@@ -9,6 +9,11 @@ export default {
             title: 'id number of blog article',
         },
         {
+            name: 'genre',
+            type: 'string',
+            title: 'genre of blog article',
+        },
+        {
             name: 'title',
             type: 'string',
             title: 'Title of blog article',

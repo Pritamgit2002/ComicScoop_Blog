@@ -41,11 +41,11 @@ export default async function BlogArticle({
         /> */}
 
         <div className="mt-2 block text-3xl text-center leading-8 font-black tracking-tight sm:text-7xl text-white pb-20 ">
-          {data.title}
+          {data?.title}
         </div>
 
         <Image
-          src={urlFor(data.titleImage).url()}
+          src={urlFor(data?.titleImage).url()}
           width={2000}
           height={2000}
           alt="Title Image"
@@ -53,7 +53,7 @@ export default async function BlogArticle({
           className=" w-4/5 h-[500px] object-cover opacity-80 "
         />
         <div className="mt-16 prose prose-red prose-invert prose-li:marker:text-primary prose-a:text-primary">
-          <PortableText value={data.content} />
+          <PortableText value={data?.content} />
         </div>
       </div>
     </div>

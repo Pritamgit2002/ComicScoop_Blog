@@ -43,9 +43,12 @@ const NavbarLanding = () => {
         </Link>
         <div className="flex items-center justify-center gap-4">
           {content.map((item, i) => (
-            <div className="  font-bold text-2xl cursor-pointer text-gray-200/65 ">
+            <Link
+              href={item.link}
+              className="  font-bold text-2xl cursor-pointer text-gray-200/65 "
+            >
               {item.title}
-            </div>
+            </Link>
           ))}
         </div>
       </div>
