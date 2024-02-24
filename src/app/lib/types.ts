@@ -1,6 +1,7 @@
 export interface simpleBlogCard {
     id: number,
     title: string,
+    genre: string,
     smallDescription: string,
     currentSlug: string,
     titleImage: any,
@@ -10,7 +11,8 @@ export interface simpleBlogCard {
 export interface fullBlog {
     id: number,
     title: string,
-    content: any;
+    genre: string,
+    content: any,
     smallDescription: string,
     currentSlug: string,
     titleImage: any,
